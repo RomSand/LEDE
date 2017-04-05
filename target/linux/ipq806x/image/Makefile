@@ -267,7 +267,7 @@ define Device/VR2600v
 	IMAGE/sysupgrade.bin := pad-extra 512 | append-kernel | pad-to $$$${KERNEL_SIZE} | append-rootfs | pad-rootfs | append-metadata
 endef
 
-TARGET_DEVICES += AP148 AP148-legacy C2600 D7800 DB149 EA8500 FRITZ4040 R7500 \
+TARGET_DEVICES += AP148 AP148-legacy C2600 D7800 DB149 EA8500 EA8350 FRITZ4040 R7500 \
 		  R7500v2 R7800 NBG6817 VR2600v
 
 $(eval $(call BuildImage))
