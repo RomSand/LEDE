@@ -22,6 +22,9 @@ platform_pre_upgrade() {
 	ea8500)
 		linksys_preupgrade "$1"
 		;;
+	ea8350)
+		linksys_preupgrade "$1"
+		;;
 	esac
 }
 
