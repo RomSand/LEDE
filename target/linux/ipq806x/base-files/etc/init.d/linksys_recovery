@@ -16,7 +16,6 @@ case $(ipq806x_board_name) in
 		# reset the boot counter
 		mtd resetbc s_env
 		;;
-case $(ipq806x_board_name) in
 	ea8350)
 		# make sure auto_recovery in uboot is always on
 		AUTO_RECOVERY_ENA="`fw_printenv -n auto_recovery`"
