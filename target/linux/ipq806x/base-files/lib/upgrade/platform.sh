@@ -19,10 +19,10 @@ platform_pre_upgrade() {
 	r7800)
 		nand_do_upgrade "$1"
 		;;
-	ea8500)
+	ea8350)
 		linksys_preupgrade "$1"
 		;;
-	ea8350)
+	ea8500)
 		linksys_preupgrade "$1"
 		;;
 	esac
@@ -37,10 +37,10 @@ platform_do_upgrade() {
 		MTD_CONFIG_ARGS="-s 0x200000"
 		default_do_upgrade "$ARGV"
 		;;
-	ea8500)
+	ea8350)
 		platform_do_upgrade_linksys "$ARGV"
 		;;
-	ea8350)
+	ea8500)
 		platform_do_upgrade_linksys "$ARGV"
 		;;
 	vr2600v)
