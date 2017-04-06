@@ -72,11 +72,11 @@ case "$FIRMWARE" in
 	r7800)
 		ath10kcal_extract "art" 4096 12064
 		;;
-	ea8500)
+	ea8350)
 		hw_mac_addr=$(mtd_get_mac_ascii devinfo hw_mac_addr)
 		ath10kcal_extract "art" 4096 12064
 		;;
-	ea8350)
+ 	ea8500)
 		hw_mac_addr=$(mtd_get_mac_ascii devinfo hw_mac_addr)
 		ath10kcal_extract "art" 4096 12064
 		;;
@@ -99,11 +99,11 @@ case "$FIRMWARE" in
 	r7800)
 		ath10kcal_extract "art" 20480 12064
 		;;
-	ea8500)
+	ea8350)
 		hw_mac_addr=$(mtd_get_mac_ascii devinfo hw_mac_addr)
 		ath10kcal_extract "art" 20480 12064
 		;;
-	ea8350)
+	ea8500)
 		hw_mac_addr=$(mtd_get_mac_ascii devinfo hw_mac_addr)
 		ath10kcal_extract "art" 20480 12064
 		;;
