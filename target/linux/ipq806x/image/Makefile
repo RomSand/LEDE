@@ -153,23 +153,6 @@ define Device/DB149
 	DEVICE_PACKAGES := ath10k-firmware-qca99x0
 endef
 
-define Device/EA8500
-	$(call Device/LegacyImage)
-	DEVICE_DTS := qcom-ipq8064-ea8500
-	PAGESIZE := 2048
-	BLOCKSIZE := 128k
-	KERNEL_SIZE := 3072k
-	FILESYSTEMS := squashfs
-	KERNEL = kernel-bin | append-dtb | uImage none | append-uImage-fakeroot-hdr
-	PROFILES += $$(DEVICE_NAME)
-	BOARD_NAME := ea8500
-	UBINIZE_OPTS := -E 5
-	IMAGES := factory.bin sysupgrade.tar
-	IMAGE/factory.bin := append-kernel | pad-to $$$${KERNEL_SIZE} | append-ubi
-	DEVICE_TITLE := Linksys EA8500
-	DEVICE_PACKAGES := ath10k-firmware-qca99x0
-endef
-
 define Device/EA8350
 	$(call Device/LegacyImage)
 	DEVICE_DTS := qcom-ipq8064-ea8350
@@ -184,6 +167,23 @@ define Device/EA8350
 	IMAGES := factory.bin sysupgrade.tar
 	IMAGE/factory.bin := append-kernel | pad-to $$$${KERNEL_SIZE} | append-ubi
 	DEVICE_TITLE := Linksys EA8350
+	DEVICE_PACKAGES := ath10k-firmware-qca99x0
+endef
+
+define Device/EA8500
+	$(call Device/LegacyImage)
+	DEVICE_DTS := qcom-ipq8064-ea8500
+	PAGESIZE := 2048
+	BLOCKSIZE := 128k
+	KERNEL_SIZE := 3072k
+	FILESYSTEMS := squashfs
+	KERNEL = kernel-bin | append-dtb | uImage none | append-uImage-fakeroot-hdr
+	PROFILES += $$(DEVICE_NAME)
+	BOARD_NAME := ea8500
+	UBINIZE_OPTS := -E 5
+	IMAGES := factory.bin sysupgrade.tar
+	IMAGE/factory.bin := append-kernel | pad-to $$$${KERNEL_SIZE} | append-ubi
+	DEVICE_TITLE := Linksys EA8500
 	DEVICE_PACKAGES := ath10k-firmware-qca99x0
 endef
 
