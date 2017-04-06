@@ -7,7 +7,7 @@ boot() {
 . /lib/ipq806x.sh
 
 case $(ipq806x_board_name) in
-	ea8500)
+	ea8350)
 		# make sure auto_recovery in uboot is always on
 		AUTO_RECOVERY_ENA="`fw_printenv -n auto_recovery`"
 		if [ "$AUTO_RECOVERY_ENA" != "yes" ] ; then
@@ -16,7 +16,7 @@ case $(ipq806x_board_name) in
 		# reset the boot counter
 		mtd resetbc s_env
 		;;
-	ea8350)
+	ea8500)
 		# make sure auto_recovery in uboot is always on
 		AUTO_RECOVERY_ENA="`fw_printenv -n auto_recovery`"
 		if [ "$AUTO_RECOVERY_ENA" != "yes" ] ; then
